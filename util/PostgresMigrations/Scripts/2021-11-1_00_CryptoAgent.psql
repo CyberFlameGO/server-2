@@ -1,0 +1,8 @@
+START TRANSACTION;
+
+ALTER TABLE "User" ADD "UsesCryptoAgent" boolean NOT NULL DEFAULT FALSE;
+
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20211101031208_CryptoAgent', '5.0.9');
+
+COMMIT;
